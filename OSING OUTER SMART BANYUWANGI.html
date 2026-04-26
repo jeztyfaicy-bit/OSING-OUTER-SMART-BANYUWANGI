@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSING OUTER SMART</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0b0b;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .page-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        section {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+            z-index: 1;
+        }
+
+        .card {
+            position: relative;
+            z-index: 2;
+            width: 85%;
+            max-width: 750px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 40px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            letter-spacing: 4px;
+            color: #ffd700;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #ffffff;
+            font-weight: 300;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 18px 40px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn:hover {
+            background: #ffd700;
+            color: black;
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        #slide1 { background-image: url('BANYUWANGI.jpeg'); }
+        #slide2 { background-image: url('KAWAH IJEN.jpeg'); }
+        #slide3 { background-image: url('BEC.jpeg'); }
+        #slide4 { background-image: url('LEGOMORO.jpeg'); }
+        #slide5 { background-image: url('TABUHAN.jpeg'); }
+        #slide6 { background-image: url('SEGO TEMPONG.jpeg'); }
+    </style>
+</head>
+<body>
+
+    <div class="page-container" id="slider">
+        <section id="slide1">
+            <div class="card">
+                <h1>Banyuwangi</h1>
+                <p>Selamat datang di platform informasi digital masa depan Banyuwangi. Kami menghadirkan transformasi digital untuk meningkatkan kesadaran budaya dan pariwisata lokal berbasis teknologi terkini.</p>
+            </div>
+        </section>
+
+        <section id="slide2">
+            <div class="card">
+                <h1>Kawah Ijen</h1>
+                <p>Kawah Ijen merupakan destinasi ikonik Banyuwangi yang mendunia dengan fenomena blue fire yang langka. Keindahan kawah belerang berpadu dengan panorama pegunungan menciptakan pengalaman eksplorasi alam yang tak terkupakan.</p>
+            </div>
+        </section>
+
+        <section id="slide3">
+            <div class="card">
+                <h1>Banyuwangi Ethno Carnival</h1>
+                <p>Banyuwangi Ethno Carnival adalah festival budaya berskala internasional yang menampilkan kostum spektakuler terinspirasi dari kekayaan tradisi lokal. Acara ini menjadi simbol kreativitas dan identitas budaya Banyuwangi di mata dunia.</p>
+            </div>
+        </section>
+
+        <section id="slide4">
+            <div class="card">
+                <h1>Legomoro</h1>
+                <p>Legomoro merupakan salah satu warisan seni tradisional Banyuwangi yang menggambarkan nilai estetika dan filosofi kehidupan masyarakat Using. Pertunjukan ini memadukan gerakan tari, musik, dan cerita yang sarat makna budaya.</p>
+            </div>
+        </section>
+
+        <section id="slide5">
+            <div class="card">
+                <h1>Pulau Tabuhan</h1>
+                <p>Pulau Tabuhan dikenal sebagai surga tersembunyi dengan hamparan pasir putih dan air laut yang jernih. Lokasi ini menjadi favorit untuk aktivitas seperti snorkeling, diving, dan kitesurfing berkat angin yang stabil sepanjang tahun.</p>
+            </div>
+        </section>
+
+        <section id="slide6">
+            <div class="card">
+                <h1>Sego Tempong</h1>
+                <p>Sego Tempong adalah kuliner khas Banyuwangi yang terkenal dengan cita rasa pedas yang “menampar”. Hidangan ini terdiri dari nasi, sayuran segar, lauk pilihan, dan sambal khas yang kuat dan menggugah selera.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="prevSlide()">KEMBALI</button>
+        <button class="btn" onclick="nextSlide()">LANJUT</button>
+    </div>
+
+    <script>
+        let currentIdx = 0;
+        const totalSlides = 6;
+        const slider = document.getElementById('slider');
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIdx * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIdx = (currentIdx + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIdx = (currentIdx - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
